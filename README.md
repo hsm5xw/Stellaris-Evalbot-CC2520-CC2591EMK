@@ -18,12 +18,13 @@ CC2520_IS_TRANSMITTER_MODE should be set to 0.
 	
 Each Evalbot runs with Micrium's uC/OS-III Real-time OS.
 				
-Note that this is NOT the full source code for this project, because some of the other code that comes with 
-the kernel and the CC2520-CC2591EMK chip cannot be distributed due to the licensing regulations.
+Note that this is NOT the full source code for this project.
 
+Since the last time I released my Evalbot project, I've received quite a few requests to share the last project's source and also 
+implement a wireless version to control the Evalbot. I try to be as open as possible, but some of the other code that comes with 
+the kernel and the CC2520-CC2591EMK chip cannot be distributed due to the licensing regulations. 
 
-
--------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 References
 
