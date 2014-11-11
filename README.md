@@ -28,7 +28,7 @@ Since the last time I released my Evalbot project, I've received quite a few req
 implement a wireless version to control the Evalbot. I try to be as open as possible, but some of the other code that comes with 
 the kernel and the CC2520-CC2591EMK chip cannot be distributed due to the licensing regulations. 
 
-The original CC2520 Software Examples[3] were based on an MSP430 devices. The Stellaris Evalbot is based on an ARM Cortex-M3 architecture.
+The original CC2520 Software Examples[3] were based on MSP430 architecture. The Stellaris Evalbot is based on ARM Cortex-M3 architecture.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
