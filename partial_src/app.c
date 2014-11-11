@@ -3,7 +3,7 @@
 				This is a multi-threaded embedded application to achieve a wireless RF control of a Stellaris Evalbot MCU 
 				from another Evalbot by using 2.4 GHz IEEE 802.15.4 communication.
 
-				Each Transmitter and Receiver Evalbot has been connected to Texas Instruments CC2520-CC2591EMK RF transceiver module via SPI communication.
+				Each Transmitter and Receiver Evalbot has been connected to a Texas Instruments CC2520-CC2591EMK RF transceiver module via SPI communication.
 				The Receiver can be controlled from the Transmitter by pressing push buttons and bump sensors on the Transmitter.
 				
 				To configure an Evalbot as a Transmitter, the code should be conditionally compiled by setting the "CC2520_IS_TRANSMITTER_MODE"
