@@ -5,7 +5,7 @@ a multi-threaded mobile RTOS robot with TI CC2520-CC2591EMK (IEEE 802.15.4) RF t
 
 -----------------------------------------------------------------------------------------------------------------
 
-![alt tag](https://raw.github.com/hsm5xw/Stellaris-Evalbot-CC2520-CC2591EMK/master/pic.PNG)
+![alt tag](https://raw.github.com/hsm5xw/Stellaris-Evalbot-CC2520-CC2591EMK/personal/pic.PNG)
 
 	A demo video is available here: https://www.youtube.com/watch?v=Po98gVj3Bmw&feature=youtu.be (maybe updated later)
 	
