@@ -1,0 +1,16 @@
+ROBOT BEHAVIOR
+
+// hobby project
+// @name: Hong Moon (hsm5xw@gmail.com)
+
+- Pressing push buttons on the Transmitter causes the Receiver to Driver forward. Pressing the buttons again causes the Receiver robot to stop.
+- Pressing the left bump sensor on the Transmitter causes the Receiver to rotate 90 degrees to the left
+- Pressing the right bump sensor on the Transmitter causes the Robot to rotate 90 degrees to the right.
+				
+- Pressing push buttons on the Receiver causes the Receiver to Driver forward. Pressing the buttons again causes the Receiver robot to stop.
+- Pressing the left bump sensor on the Receiver causes the Receiver to rotate 90 degrees to the left
+- Pressing the right bump sensor on the Receiver causes the Robot to rotate 90 degrees to the right.				
+				
+- When the Receiver robot is idle, the robot only makes a 90 degree turn and stops upon bump sensor presses.
+- When the Receiver robot is driving forward, the robot makes a 90 degree turn and continues moving forward.
+- When the Receiver robot bumps into an obstacle while moving, the robot makes a stop.

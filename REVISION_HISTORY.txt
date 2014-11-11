@@ -1,0 +1,62 @@
+REVISION HISTORY
+
+// hobby project
+// @name: Hong Moon (hsm5xw@gmail.com)
+
+dsave3: reading chip id and version working !!! (with soft SPI)
+        There is a hardware error in the EM expansion port of the Stellaris Evalbot, so the hardware SPI doesn't work.
+
+dsave5: sending/receiving 1 byte success !!!
+		maybe apply some more fixes about updating the receive buffer !!!
+		
+dsave6: some unknown transmitter/receiver error. Back to dsave5.
+
+dsave7: fixed error in dsave6. Added basic documentation as intended in dsave6.
+		Somehow, if I disable reading the chip id and chip version, I get a crappy value, which is "s?" (second one unknown)
+		
+dsave11: sending and receiving 'l', 'r', 'p' upon button and bump sensor presses success !!! Created a separate transmitter task success.		
+
+dsave13: fixed some display task to make it more responsive (from 5sec to 1sec)
+
+dsave14: checking only the new packet success BUT only for left and right bump sensor presses !!! When the push buttons are pressed, there are some errors.
+         Not getting ANY updated signal again after the crash somehow.
+		 Involved some changes in rxi.isReady in "basic_rf.c" file !
+		 
+dsave15: somehow works alright. don't really know what happened though. But it works. Maybe some conditional compile errors.
+
+dsave16: some success on controlling the robot movement directly from the transmitter. 
+
+		 Push button presses work alright. 
+         Pressing the right bump sensor somehow yields a left rotation. (thinking back, works alright since the original purpose was to avoid obstacles on the right)
+		 Pressing the left bump sensor doesn't work and makes the robot stop. 
+		 But the robot receives the correct message.
+		 
+		 Fixed some hardware errors. Found that the error came from assembling the DC motors. Found that the motors were loosely connected to the board and
+		 were rattling when the motors started turning the wheel.
+		 
+		 The robot receiver still receives message through the Display Task to facilitate debugging. But it should be moved to a separate Receiver Task later.
+		 
+		 Found the error from Str_Cmp function from Micrium library. It sucks. The received data 'l' is correctly compared with 'l' but also thinks it's the same 
+		 as 'p' by returning a 0 result. Thus this error made the left bump sensor press from halting the robot because the STOP flag was also posted !!
+		 
+		 
+dsave17: fixed the error in dsave16. Threw away the Micrium Str_Cmp function and replaced it with 'stdncmp' function in <string.h> (updated "includes.h" file).
+		 Achieved a basic control of the robot with success !!!!
+		 Now need to refine the robot movement logic.
+		 
+dsave18: removed all annoying "random" element from the example code. Achieving a more precise 90 degree turn upon button and bump sensor presses.
+		 removed all random number generator. replaced a random drive time window to a fixed drive time window.
+
+dsave19: added logic to only make a turn upon a bump sensor press when the current state is idle.		 
+
+dsave20: fixed the error of getting both the left bump sensor flag and the right bump sensor flag posted at the same time by adding some logic to consume one of them.
+         This happens when the robot collides with an obstacle ahead of it and gets both of the sensors pressed.
+		 
+dsave21: fixed some motor control logic so that the robot continues moving after turning uppon left/right bump sensor presses from the RF transmitter.
+
+dsave22: demo success. wrote and activated the separate receiver task. significantly improved the response time. robot now reacts instantaneously to the RF transmitter's command.
+		 Although it can be optimized further by using inline functions and increasing the frequency of the receiver task handling, I will stop at this point because the application
+		 already runs fast and responsive enough that the robot reacts instantaneously already.
+		 
+dsave23: added some documentation		 
+		 
