@@ -5,6 +5,8 @@ a multi-threaded mobile RTOS robot with TI CC2520-CC2591EMK (IEEE 802.15.4) RF t
 
 -----------------------------------------------------------------------------------------------------------------
 
+![alt tag](https://raw.github.com/hsm5xw/Stellaris-Evalbot-CC2520-CC2591EMK/master/pic.PNG)
+
 This is a multi-threaded embedded application to achieve a wireless RF control of a Stellaris Evalbot MCU 
 from another Evalbot by using 2.4 GHz IEEE 802.15.4 communication.
 
